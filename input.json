@@ -1,0 +1,86 @@
+{
+  "hook": "patient-review",
+  "hookInstance": "USE RANDOM STRING FOR EVERY RUN!!!!",
+  "fhirServer": "http://sqlonfhir-stu3.azurewebsites.net/fhir/",
+  "redirect": "about:blank",
+  "user": "Practitioner/788",
+  "patient": "c9f6cfc5-4e7a-4d0b-95bf-d22e423cfada",
+  "prefetch": {
+    "patientRecord": {
+      "resource": {
+        "resourceType": "Bundle",
+        "type": "transaction",
+        "meta": {
+          "lastUpdated": "2017-09-05T17:38:20.047Z"
+        },
+        "entry": [
+          {
+            "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Patient/c9f6cfc5-4e7a-4d0b-95bf-d22e423cfada",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "c9f6cfc5-4e7a-4d0b-95bf-d22e423cfada",
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient</div>"
+              },
+              "name": [
+                {
+                  "family": "pt",
+                  "given": [
+                    "simple"
+                  ]
+                }
+              ],
+              "gender": "female"
+            },
+            "search": {
+              "mode": "match"
+            }
+          },
+          {
+            "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Condition/4512a789-20db-445-5517-b083c9072051",
+            "resource": {
+              "resourceType": "Condition",
+              "id": "4512a789-20db-445-5517-b083c9072051",
+              "meta": {
+                "profile": [
+                  "http://evinance.com/fhir-DSTU3/StructureDefinition/breast-cancer"
+                ]
+              },
+              "text": {
+                "status": "generated",
+                "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">breast-cancer</div>"
+              },
+              "clinicalStatus": "active",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10-cm",
+                    "code": "C50",
+                    "display": "Malignant neoplasm of breast"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/c9f6cfc5-4e7a-4d0b-95bf-d22e423cfada"
+              },
+              "onsetAge": {
+                "value": 54,
+                "unit": "year",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "search": {
+              "mode": "match"
+            }
+          }
+        ]
+      },
+      "response": {
+        "status": "200 OK"
+      }
+    }
+  },
+  "context": []
+}
