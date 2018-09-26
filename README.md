@@ -23,7 +23,7 @@ Web browser driver, geckodriver (firefox) and chromedriver (chrome) are included
 # How to execute the scripts
 After cloning the repo execute the command "behave"
 
-If more information is needed, use: "behave --no-capture --no-capture-stderr -f pl"
+If more information is needed, use: "behave --no-capture --no-capture-stderr -f plain"
 
 # Test Procedure
 
